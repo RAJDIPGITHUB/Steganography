@@ -1,6 +1,3 @@
-# Steganography
-Research publication
-
 # Robust QR Code-Based Image Steganography 📦🔍  
 **Using ML-Guided Safe Zones + Multi-Copy Embedding with Error Correction**
 
