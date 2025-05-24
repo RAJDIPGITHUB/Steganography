@@ -29,3 +29,26 @@ This project implements a novel and robust QR code-based image steganography fra
 
 ```bash
 pip install opencv-python numpy tensorflow qrcode scikit-image matplotlib
+
+🚀 How It Works
+🧵 Embedding Flow (main_flow.py)
+Load a cover image (preferably with rich edges).
+
+Detect safe zones using Sobel/Canny and a trained CNN.
+
+Generate a QR code from the message.
+
+Convert QR to bitstream and replicate n times for redundancy.
+
+Embed bits into 8×8 rotated safe blocks (only blue channel LSB).
+
+Save stego_output.png and secret_key.json.
+
+🔓 Decoder Flow (decoder_flow.py)
+Load compressed stego_output.jpg or .png.
+
+Use secret_key.json to identify block positions and rotation angles.
+
+Extract LSBs and apply vote-based reconstruction.
+
+Save and decode the QR to recover the hidden message.
