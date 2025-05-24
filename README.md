@@ -13,7 +13,7 @@ This project implements a novel and robust QR code-based image steganography fra
 - 🧠 **Multi-copy embedding** + **voting-based decoding** for robust QR recovery
 - 🧱 Structured Python modules with modular design for easy extension
 - 📊 Supports PSNR, SSIM, and QR recovery metrics after compression
-- 🧪 Works even with **JPEG quality as low as 50%**
+  
 
 ---
 ## 🚀 How It Works
@@ -31,7 +31,7 @@ Embed bits into 8×8 rotated safe blocks (only blue channel LSB).
 Save stego_output.png and secret_key.json.
 
 🔓 Decoder Flow (decoder_flow.py)
-Load compressed stego_output.jpg or .png.
+Load stego_output.png.
 
 Use secret_key.json to identify block positions and rotation angles.
 
